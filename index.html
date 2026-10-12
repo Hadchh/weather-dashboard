@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <main>
+    <form id="search-form">
+      <label for="city-input">City</label>
+      <div class="search-row">
+        <input id="city-input" name="city" type="text" placeholder="e.g. Beirut">
+        <button id="search-btn" type="submit">Search</button>
+      </div>
+    </form>
+
+    <div class="status-row">
+      <p id="status"></p>
+    </div>
+
+    <div id="weather" class="card">
+      <h2 id="city-name"></h2>
+
+      <div class="current">
+        <p id="icon" class="icon"></p>
+        <div>
+          <p id="temp"></p>
+          <p id="conditions"></p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="detail">Feels like <p id="feels" class="value"></p></div>
+        <div class="detail">Humidity <p id="humidity" class="value"></p></div>
+        <div class="detail">Wind <p id="wind" class="value"></p></div>
+      </div>
+
+      <h3>3-day forecast</h3>
+      <div id="forecast"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Data from Open-Meteo (open-meteo.com)</p>
+  </footer>
+
+  <script src="js/getJSON.js"></script>
+  <script src="js/codes.js"></script>
+  <script src="js/states.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
